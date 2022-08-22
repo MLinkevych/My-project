@@ -1,18 +1,16 @@
 package schoolMarksProject;
 
+import java.util.Set;
+
 public class Parent {
-    private int parentID;
+
     private String nameParent;
     private String email;
+    private Set<Student> kids;
 
-    public Parent(int parentID, String nameParent, String email) {
-        this.parentID = parentID;
+    public Parent(String nameParent, String email) {
         this.nameParent = nameParent;
         this.email = email;
-    }
-
-    public int getParentID() {
-        return parentID;
     }
 
     public String getNameParent() {

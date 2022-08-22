@@ -5,6 +5,9 @@ public class Teacher {
     private String nameTeacher;
     private String email;
     private String grade;
+    /*
+     * Constructor
+     * */
 
     public Teacher(int id, String nameTeacher, String email, String grade) {
         this.id = id;
@@ -12,14 +15,23 @@ public class Teacher {
         this.email = email;
         this.grade = grade;
     }
+    /*
+     * ID getter
+     * */
 
     public int getId() {
         return id;
     }
+    /*
+     * Teacher's name getter
+     * */
 
     public String getNameTeacher() {
         return nameTeacher;
     }
+    /*
+     * Teachers email getter
+     * */
 
     public String getEmail() {
         return email;
@@ -36,4 +48,6 @@ public class Teacher {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
 }
