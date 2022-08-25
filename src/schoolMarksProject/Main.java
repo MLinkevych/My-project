@@ -11,6 +11,10 @@ public class Main {
 
         s1.addParent(p1);
         s2.addParent(p2);
+        p1.addKid(s1);
+        p2.addKid(s2);
+
+
 
 
     }

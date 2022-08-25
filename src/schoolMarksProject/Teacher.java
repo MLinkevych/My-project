@@ -49,5 +49,7 @@ public class Teacher {
         this.email = email;
     }
 
+    public void setMarks()
+
 
 }
