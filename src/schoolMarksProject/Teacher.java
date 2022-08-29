@@ -1,37 +1,34 @@
 package schoolMarksProject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Teacher {
-    private int id;
-    private String nameTeacher;
+    private String teacherFirstName;
+    private String teacherLastName;
     private String email;
     private String grade;
     /*
      * Constructor
      * */
 
-    public Teacher(int id, String nameTeacher, String email, String grade) {
-        this.id = id;
-        this.nameTeacher = nameTeacher;
+    public Teacher(String teacherFirstName, String teacherLastName, String email, String grade) {
+        this.teacherFirstName = teacherFirstName;
+        this.teacherLastName = teacherLastName;
         this.email = email;
         this.grade = grade;
     }
     /*
-     * ID getter
+     * Getters and setters. Getters are set for all the fields, while setters is only for the grade and email
      * */
 
-    public int getId() {
-        return id;
+    public String getTeacherFirstName() {
+        return teacherFirstName;
     }
-    /*
-     * Teacher's name getter
-     * */
 
-    public String getNameTeacher() {
-        return nameTeacher;
+    public String getTeacherLastName() {
+        return teacherLastName;
     }
-    /*
-     * Teachers email getter
-     * */
 
     public String getEmail() {
         return email;
@@ -49,7 +46,5 @@ public class Teacher {
         this.email = email;
     }
 
-    public void setMarks()
-
-
 }
+

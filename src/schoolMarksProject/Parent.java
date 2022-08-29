@@ -1,22 +1,42 @@
 package schoolMarksProject;
 
 import java.util.HashSet;
-import java.util.Set;
+
 
 public class Parent {
 
-    private String nameParent;
+    private String parentFirstName;
+    private String parentLastName;
     private String email;
-    private Set<Student> kids;
 
-    public Parent(String nameParent, String email) {
-        this.nameParent = nameParent;
+    /*
+    * Constructor for the parents objects
+    *
+    */
+
+    public Parent(String parentFirstName, String parentLastName, String email) {
+        this.parentFirstName = parentFirstName;
+        this.parentLastName = parentLastName;
         this.email = email;
-        kids = new HashSet<>();
     }
 
-    public String getNameParent() {
-        return nameParent;
+    public Parent(String parentFirstName, String parentLastName) {
+        this.parentFirstName = parentFirstName;
+        this.parentLastName = parentLastName;
+    }
+
+    public Parent() {
+    }
+
+    /*
+     * Getters and setters. Getters are set for all the fields, while setter is only for the email
+     * */
+    public String getParentFirstName() {
+        return parentFirstName;
+    }
+
+    public String getParentLastName() {
+        return parentLastName;
     }
 
     public String getEmail() {
@@ -27,7 +47,5 @@ public class Parent {
         this.email = email;
     }
 
-    public void addKid (Student student){
-        kids.add(student);
-    }
+
 }

@@ -1,33 +1,62 @@
 package schoolMarksProject;
 
-import java.util.HashSet;
-import java.util.Set;
 
-public class Student {
+
+public class Student extends Parent {
 
     private String grade;
-    private String nameStudent;
-    private Set<Parent> parents;
+    private String studentFirstName;
+    private String studentLastName;
+    private int math=0;
+    private int eng=0;
+    private int ukr=0;
 
-    public Student(String grade, String nameStudent) {
+
+    /*
+     * Constructor for the students objects
+     *
+     */
+
+    public Student(String parentFirstName, String parentLastName, String grade,
+                   String studentFirstName, String studentLastName) {
+        super(parentFirstName, parentLastName);
         this.grade = grade;
-        this.nameStudent = nameStudent;
-        parents = new HashSet<>();
+        this.studentFirstName = studentFirstName;
+        this.studentLastName = studentLastName;
     }
 
+    public Student(String studentFirstName, String studentLastName) {
+        this.studentFirstName = studentFirstName;
+        this.studentLastName = studentLastName;
+    }
+
+    /*
+     * Getters and setters. Getters are set for all the fields, while setters is only for the grade and email
+     * */
     public String getGrade() {
         return grade;
     }
 
-    public String getNameStudent() {
-        return nameStudent;
+    public String getStudentFirstName() {
+        return studentFirstName;
+    }
+
+    public String getStudentLastName() {
+        return studentLastName;
     }
 
     public void setGrade(String grade) {
         this.grade = grade;
     }
 
-    public void addParent (Parent parent){
-        parents.add(parent);
+    @Override
+    public String toString() {
+        return "Student{" +
+                "grade='" + grade + '\'' +
+                ", studentFirstName='" + studentFirstName + '\'' +
+                ", studentLastName='" + studentLastName + '\'' +
+                '}';
     }
+
+
 }

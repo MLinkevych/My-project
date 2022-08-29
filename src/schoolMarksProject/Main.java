@@ -1,21 +1,21 @@
 package schoolMarksProject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
-        Teacher t1 = new Teacher(1, "Anna Makarenko", "t1@gmail.com", "1a" );
-        Parent p1 = new Parent("Andrey Kryk", "p1@gmail.com");
-        Parent p2 = new Parent("Ivan Koval", "p2@gmail.com");
-        Student s1 = new Student("1a", "Ivan Kryk");
-        Student s2 = new Student("1a", "Anna Koval");
+        Teacher t1 = new Teacher("Anna", "Kornienko", "t1@gmail.com", "1a");
+        Parent p1 = new Parent("Andrey", "Marchenko", "p1@gmail.com");
+        Student s1 = new Student("Andrey", "Marchenko", "1a", "Julia",
+                "Marchenko");
 
-        s1.addParent(p1);
-        s2.addParent(p2);
-        p1.addKid(s1);
-        p2.addKid(s2);
-
-
-
+        List<Student> students = new ArrayList<>();
+        students.add(s1);
+        for (Student s: students){
+            System.out.println(students);
+        }
 
     }
 }
