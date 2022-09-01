@@ -24,7 +24,7 @@ public class Main {
         semesterGrades.forEach((student, grade) -> System.out.println(student.toString()+grade.toString()));
 
 
-       /* Comparator<Student> studentComparator = new StudentNameComparator();*/
+        Comparator<Student> studentComparator = new StudentNameComparator();
         List<Student> students = new ArrayList<>();
         students.add(student1);
         students.add(student2);
