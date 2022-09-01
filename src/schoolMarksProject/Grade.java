@@ -1,16 +1,13 @@
 package schoolMarksProject;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Grade {
     private int math;
     private int eng;
     private int ukr;
-    private Set<Student> kids;
+
 
     public Grade() {
-        kids = new HashSet<>();
+
     }
 
     public int getMath() {
@@ -37,9 +34,6 @@ public class Grade {
         this.ukr = ukr;
     }
 
-    public void addKid(Student student) {
-        kids.add(student);
-    }
 
 
 }

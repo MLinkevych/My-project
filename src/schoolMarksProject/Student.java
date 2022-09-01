@@ -1,15 +1,14 @@
 package schoolMarksProject;
 
 
+import java.util.Set;
 
-public class Student extends Parent {
+public class Student extends Parent implements Comparable<Student> {
 
     private String grade;
     private String studentFirstName;
     private String studentLastName;
-    private int math=0;
-    private int eng=0;
-    private int ukr=0;
+/*    private Set<Student> kids;*/
 
 
     /*
@@ -48,6 +47,14 @@ public class Student extends Parent {
     public void setGrade(String grade) {
         this.grade = grade;
     }
+/*    public Set<Student> getKids() {
+        return kids;
+    }*/
+
+ /*   public void addKid(Student student) {
+        kids.add(student);
+    }*/
+
 
     @Override
     public String toString() {
@@ -59,4 +66,8 @@ public class Student extends Parent {
     }
 
 
+    @Override
+    public int compareTo(Student o) {
+        return getStudentLastName().compareTo(o.getStudentLastName());
+    }
 }
