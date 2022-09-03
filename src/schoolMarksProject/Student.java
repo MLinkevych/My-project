@@ -58,11 +58,9 @@ public class Student extends Parent implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "grade='" + grade + '\'' +
-                ", studentFirstName='" + studentFirstName + '\'' +
-                ", studentLastName='" + studentLastName + '\'' +
-                '}';
+        return "Student " +
+                "grade= " + grade +  ", studentFirstName= " + studentFirstName +
+                ", studentLastName= " + studentLastName;
     }
 
 

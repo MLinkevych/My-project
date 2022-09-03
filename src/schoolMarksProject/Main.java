@@ -13,15 +13,15 @@ public class Main {
                 "Artemchenko");
         Student student3 = new Student("Artem", "Dmitruk", "1a", "Mark",
                 "Dmitruk");
-        Grade grade1 = new Grade();
-        Grade grade2 = new Grade();
-        Grade grade3 = new Grade();
+        Grade grade1 = new Grade(12,10,10);
+        Grade grade2 = new Grade(11,11,8);
+        Grade grade3 = new Grade(10,11,12);
 
         Map<Student, Grade> semesterGrades = new HashMap<>();
         semesterGrades.put(student1, grade1);
         semesterGrades.put(student2, grade2);
         semesterGrades.put(student3, grade3);
-        semesterGrades.forEach((student, grade) -> System.out.println(student.toString()+grade.toString()));
+        semesterGrades.forEach((student, grade) -> System.out.println(student.toString()+ " " +grade.toString()));
 
 
         Comparator<Student> studentComparator = new StudentNameComparator();
@@ -30,7 +30,7 @@ public class Main {
         students.add(student2);
         students.add(student3);
 
-       /* Collections.sort(students, new StudentNameComparator());*/
+        Collections.sort(students, new StudentNameComparator());
 
         for(Student  student : students){
 

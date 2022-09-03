@@ -10,6 +10,12 @@ public class Grade {
 
     }
 
+    public Grade(int math, int eng, int ukr) {
+        this.math = math;
+        this.eng = eng;
+        this.ukr = ukr;
+    }
+
     public int getMath() {
         return math;
     }
@@ -34,6 +40,15 @@ public class Grade {
         this.ukr = ukr;
     }
 
+    public double avgScore (Grade grade) {
+        return (getMath()+getEng()+getUkr())/3;
+    }
 
-
+    @Override
+    public String toString() {
+        return "Grades for the semester: " +
+                "math=" + math +
+                ", eng=" + eng +
+                ", ukr=" + ukr;
+    }
 }
